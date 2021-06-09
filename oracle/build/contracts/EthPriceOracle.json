@@ -69,7 +69,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -7043,9 +7044,75 @@
     "name": "solc",
     "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "9545242630824": {
+      "events": {
+        "0x3d50a0c24e97813f35595d2f1f37dbf421d5e97f37abd4e222853e9b9c82c8d5": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "callerAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            }
+          ],
+          "name": "GetLatestEthPriceEvent",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        "0x91b860381268a473101de3379abbb70abf7ea6c9d1735cf58b9816479ff3b727": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "ethPrice",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "callerAddress",
+              "type": "address"
+            }
+          ],
+          "name": "SetLatestEthPriceEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xde0B7096c1C571c5D5e34B9ebDCE840D05123b46",
+      "transactionHash": "0xf9e6aacba9a12f4cb6246128b6f11239e983a0b095fb1eb0e715ecef9e1e41ca"
+    }
+  },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-06-07T01:11:43.905Z",
+  "updatedAt": "2021-06-07T20:15:04.577Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {

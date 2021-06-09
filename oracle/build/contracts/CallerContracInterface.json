@@ -29,26 +29,26 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity 0.8.0;\r\nabstract contract CallerContracInterface {\r\n  function callback(uint256 _ethPrice, uint256 id) public virtual;\r\n}\r\n",
-  "sourcePath": "D:\\EthPriceOracle\\oracle\\contracts\\CallerContractInterface.sol",
+  "sourcePath": "D:/EthPriceOracle/oracle/contracts/CallerContractInterface.sol",
   "ast": {
     "absolutePath": "/D/EthPriceOracle/oracle/contracts/CallerContractInterface.sol",
     "exportedSymbols": {
       "CallerContracInterface": [
-        142
+        9
       ]
     },
-    "id": 143,
+    "id": 10,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 134,
+        "id": 1,
         "literals": [
           "solidity",
           "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:22:2"
+        "src": "0:22:0"
       },
       {
         "abstract": true,
@@ -56,33 +56,33 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": false,
-        "id": 142,
+        "id": 9,
         "linearizedBaseContracts": [
-          142
+          9
         ],
         "name": "CallerContracInterface",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "functionSelector": "b5d73ba4",
-            "id": 141,
+            "id": 8,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "callback",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 139,
+              "id": 6,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 136,
+                  "id": 3,
                   "mutability": "mutable",
                   "name": "_ethPrice",
                   "nodeType": "VariableDeclaration",
-                  "scope": 141,
-                  "src": "88:17:2",
+                  "scope": 8,
+                  "src": "88:17:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -90,10 +90,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 135,
+                    "id": 2,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "88:7:2",
+                    "src": "88:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -103,12 +103,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 138,
+                  "id": 5,
                   "mutability": "mutable",
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 141,
-                  "src": "107:10:2",
+                  "scope": 8,
+                  "src": "107:10:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -116,10 +116,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 137,
+                    "id": 4,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "107:7:2",
+                    "src": "107:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -128,46 +128,46 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "87:31:2"
+              "src": "87:31:0"
             },
             "returnParameters": {
-              "id": 140,
+              "id": 7,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "133:0:2"
+              "src": "133:0:0"
             },
-            "scope": 142,
-            "src": "70:64:2",
+            "scope": 9,
+            "src": "70:64:0",
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "public"
           }
         ],
-        "scope": 143,
-        "src": "24:113:2"
+        "scope": 10,
+        "src": "24:113:0"
       }
     ],
-    "src": "0:139:2"
+    "src": "0:139:0"
   },
   "legacyAST": {
     "absolutePath": "/D/EthPriceOracle/oracle/contracts/CallerContractInterface.sol",
     "exportedSymbols": {
       "CallerContracInterface": [
-        142
+        9
       ]
     },
-    "id": 143,
+    "id": 10,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 134,
+        "id": 1,
         "literals": [
           "solidity",
           "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:22:2"
+        "src": "0:22:0"
       },
       {
         "abstract": true,
@@ -175,33 +175,33 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": false,
-        "id": 142,
+        "id": 9,
         "linearizedBaseContracts": [
-          142
+          9
         ],
         "name": "CallerContracInterface",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "functionSelector": "b5d73ba4",
-            "id": 141,
+            "id": 8,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "callback",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 139,
+              "id": 6,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 136,
+                  "id": 3,
                   "mutability": "mutable",
                   "name": "_ethPrice",
                   "nodeType": "VariableDeclaration",
-                  "scope": 141,
-                  "src": "88:17:2",
+                  "scope": 8,
+                  "src": "88:17:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -209,10 +209,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 135,
+                    "id": 2,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "88:7:2",
+                    "src": "88:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -222,12 +222,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 138,
+                  "id": 5,
                   "mutability": "mutable",
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 141,
-                  "src": "107:10:2",
+                  "scope": 8,
+                  "src": "107:10:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -235,10 +235,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 137,
+                    "id": 4,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "107:7:2",
+                    "src": "107:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -247,26 +247,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "87:31:2"
+              "src": "87:31:0"
             },
             "returnParameters": {
-              "id": 140,
+              "id": 7,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "133:0:2"
+              "src": "133:0:0"
             },
-            "scope": 142,
-            "src": "70:64:2",
+            "scope": 9,
+            "src": "70:64:0",
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "public"
           }
         ],
-        "scope": 143,
-        "src": "24:113:2"
+        "scope": 10,
+        "src": "24:113:0"
       }
     ],
-    "src": "0:139:2"
+    "src": "0:139:0"
   },
   "compiler": {
     "name": "solc",
@@ -274,7 +274,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-06-07T01:11:43.903Z",
+  "updatedAt": "2021-06-07T20:09:45.295Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
