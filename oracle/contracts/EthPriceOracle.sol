@@ -9,6 +9,12 @@ contract EthPriceOracle {
   uint private modulus = 1000;
   uint private numOracles = 0;
   mapping(uint256=>bool) pendingRequests;
+  struct Response {
+    address oracleAddress;
+    address callerAddress;
+    uint256 ethPrice;
+  }
+  mapping (uint256=>Response[]) public requestIdToResponse;
   event GetLatestEthPriceEvent(address callerAddress, uint id);
   event SetLatestEthPriceEvent(uint256 ethPrice, address callerAddress);
   event AddOracleEvent(address oracleAddress);
@@ -26,7 +32,7 @@ contract EthPriceOracle {
   function removeOracle (address _oracle) public {
     require(owners.has(msg.sender), "Not an owner!");
     require(oracles.has(_oracle), "Not an oracle!");
-    require(numOracles > 1, "Do not remove the last oracle!");
+    require (numOracles > 1, "Do not remove the last oracle!");
     oracles.remove(_oracle);
     numOracles--;
     emit RemoveOracleEvent(_oracle);
@@ -38,8 +44,12 @@ contract EthPriceOracle {
     emit GetLatestEthPriceEvent(msg.sender, id);
     return id;
   }
-  function setLatestEthPrice(uint256 _ethPrice, address _callerAddress, uint256 _id) public onlyOwner {
+  function setLatestEthPrice(uint256 _ethPrice, address _callerAddress, uint256 _id) public {
+    require(oracles.has(msg.sender), "Not an oracle!");
     require(pendingRequests[_id], "This request is not in my pending list.");
+    Response memory resp; // declare the struct
+    resp = Response(msg.sender, _callerAddress, _ethPrice); // initialize it
+    requestIdToResponse[_id].push(resp);
     delete pendingRequests[_id];
     CallerContracInterface callerContractInstance;
     callerContractInstance = CallerContracInterface(_callerAddress);
