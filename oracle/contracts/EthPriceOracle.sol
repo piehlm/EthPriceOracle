@@ -6,7 +6,7 @@ contract EthPriceOracle {
   using Roles for Roles.Role;
   Roles.Role private owners;
   Roles.Role private oracles;
-  // 1. Tell your contract to use `SafeMath` for `uint256`
+  using SafeMath for uint256;
   uint private randNonce = 0;
   uint private modulus = 1000;
   uint private numOracles = 0;
@@ -62,9 +62,9 @@ contract EthPriceOracle {
     if (numResponses == THRESHOLD) {
       uint computedEthPrice = 0;
         for (uint f=0; f < requestIdToResponse[_id].length; f++) {
-        computedEthPrice +=  requestIdToResponse[_id][f].ethPrice; // Replace this with a `SafeMatch` method
+        computedEthPrice =  computedEthPrice.add(requestIdToResponse[_id][f].ethPrice);
       }
-      computedEthPrice = computedEthPrice / numResponses; // Replace this with a `SafeMath` method
+      computedEthPrice = computedEthPrice.div(numResponses);
       delete pendingRequests[_id];
       CallerContracInterface callerContractInstance;
       callerContractInstance = CallerContracInterface(_callerAddress);
