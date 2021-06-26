@@ -1,10 +1,12 @@
 pragma solidity 0.5.0;
 import "openzeppelin-solidity/contracts/access/Roles.sol";
+import "openzeppelin-solidity/contracts/math/SafeMath.sol";
 import "./CallerContractInterface.sol";
 contract EthPriceOracle {
   using Roles for Roles.Role;
   Roles.Role private owners;
   Roles.Role private oracles;
+  // 1. Tell your contract to use `SafeMath` for `uint256`
   uint private randNonce = 0;
   uint private modulus = 1000;
   uint private numOracles = 0;
@@ -58,6 +60,11 @@ contract EthPriceOracle {
     requestIdToResponse[_id].push(resp);
     uint numResponses = requestIdToResponse[_id].length;
     if (numResponses == THRESHOLD) {
+      uint computedEthPrice = 0;
+        for (uint f=0; f < requestIdToResponse[_id].length; f++) {
+        computedEthPrice +=  requestIdToResponse[_id][f].ethPrice; // Replace this with a `SafeMatch` method
+      }
+      computedEthPrice = computedEthPrice / numResponses; // Replace this with a `SafeMath` method
       delete pendingRequests[_id];
       CallerContracInterface callerContractInstance;
       callerContractInstance = CallerContracInterface(_callerAddress);
