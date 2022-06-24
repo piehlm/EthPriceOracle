@@ -13,6 +13,17 @@ async function getOracleContract (web3js) {
   return new web3js.eth.Contract(OracleJSON.abi, OracleJSON.networks[networkId].address)
 }
 
+async function retrieveLatestEthPrice () {
+  const resp = await axios({
+    url: 'https://api.binance.com/api/v3/ticker/price',
+    params: {
+      symbol: 'ETHUSDT'
+    },
+    method: 'get'
+  })
+  return resp.data.price
+}
+
 async function filterEvents (oracleContract, web3js) {
   oracleContract.events.GetLatestEthPriceEvent(async (err, event) => {
     if (err) {
